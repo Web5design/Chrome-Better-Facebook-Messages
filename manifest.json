@@ -1,0 +1,20 @@
+{
+    "name": "Better Facebook Messages",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Do you want a better facebook messages?",
+
+    "content_scripts": [{
+        "matches": [
+            "http://www.facebook.com/messages/*",
+            "https://www.facebook.com/messages/*"
+        ],
+        "js": ["fixMessages.js"],
+        "run_at": "document_end"
+    }],
+
+    "permissions": [
+        "http://www.facebook.com/",
+        "https://www.facebook.com/"
+    ]
+}
